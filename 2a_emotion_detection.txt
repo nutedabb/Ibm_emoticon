@@ -1,6 +1,3 @@
-import requests
-import json
-
 def emotion_detector(text_to_analyze):
     """ this fuction checks the emotion of a given 
     word and returns a dictionary
@@ -10,6 +7,4 @@ def emotion_detector(text_to_analyze):
     Input_json = { "raw_document": { "text": text_to_analyze } }
     response = requests.post(URL, json=Input_json, headers = Headers)
     cleaned_response = json.loads(response.text)
-    print(cleaned_response)
-
-
+    return(cleaned_response)
