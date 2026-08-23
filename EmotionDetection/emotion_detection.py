@@ -18,6 +18,6 @@ def emotion_detector(text_to_analyze):
             
 
     final_response = {**cleaned_response,"dominant_emotion":dominant_emotion}
-    print(final_response)
+    return(final_response)
    
 
